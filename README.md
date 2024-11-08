@@ -91,11 +91,7 @@ This additional script processes images by converting them to grayscale, enhanci
 2. **Image Processing**:
    - Loads each image, resizes it to 512x512 pixels, and converts it to grayscale.
    
-3. **Brightness and Contrast Adjustment**:
-   - Increases brightness by a specified amount (`brightness_increase`).
-   - Adjusts contrast by normalizing the grayscale image’s pixel intensities, with values clipped between 0 and 255.
-
-4. **Saving the Processed Image and Histogram**:
+3. **Saving the Processed Image and Histogram**:
    - Saves the contrast-adjusted grayscale image to the output directory.
    - Generates and saves a histogram plot of pixel intensities for each grayscale image, providing insight into the intensity distribution.
 
@@ -140,7 +136,8 @@ The project is organized as follows:
 ---
 
 ## Usage
-
+### Dataset Accessibility
+A small sample dataset has been uploaded for experimental purposes, allowing users to test and validate the model setup and performance. If you require the complete dataset for in-depth experimentation or research, you may request it by contacting the corresponding author at the email [zhangtao@tju.edu.cn](zhangtao@tju.edu.cn). Access to the full dataset will be granted upon request.
 ### Prepare the Dataset
 The dataset contains multispectral images at various wavelengths (e.g., 600nm, 620nm, 670nm, and 760nm). Organize the dataset as follows:
 
