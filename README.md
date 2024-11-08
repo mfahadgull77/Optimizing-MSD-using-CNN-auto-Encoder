@@ -136,8 +136,7 @@ The project is organized as follows:
 ---
 
 ## Usage
-### Dataset Accessibility
-A small sample dataset has been uploaded for experimental purposes, allowing users to test and validate the model setup and performance. If you require the complete dataset for in-depth experimentation or research, you may request it by contacting the corresponding author at the email [zhangtao@tju.edu.cn](zhangtao@tju.edu.cn). Access to the full dataset will be granted upon request.
+
 ### Prepare the Dataset
 The dataset contains multispectral images at various wavelengths (e.g., 600nm, 620nm, 670nm, and 760nm). Organize the dataset as follows:
 
@@ -182,7 +181,7 @@ pip install -r requirements.txt
 ---
 
 ## Dataset Accessibility
-A small sample dataset is available in this repository for experimental purposes. To access the full dataset for extended research, please contact the corresponding author at `zhangtao@tju.edu.cn`. 
+A small sample dataset has been uploaded for experimental purposes, allowing users to test and validate the model setup and performance. If you require the complete dataset for in-depth experimentation or research, you may request it by contacting the corresponding author at the email [zhangtao@tju.edu.cn](zhangtao@tju.edu.cn). Access to the full dataset will be granted upon request. 
 
 ---
 
