@@ -1,0 +1,16 @@
+# Deep learning framework (for CNN model)
+torch==1.9.0
+torchvision==0.10.0
+
+# Image processing libraries
+scikit-image==0.18.3  # for image denoising and transformations
+opencv-python==4.5.1.48  # for image loading and processing (cv2)
+
+# Numerical libraries
+numpy==1.21.2  # for numerical operations
+
+# Plotting and visualization libraries
+matplotlib==3.4.3  # for visualizing results, e.g., images and metrics
+
+# Scientific computation library
+scipy==1.7.1  # for scientific computations
