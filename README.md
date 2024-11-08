@@ -31,6 +31,14 @@ This repository contains a CNN-AE model specifically designed for denoising mult
 - **CNN-AE Model**: A convolutional autoencoder that denoises multispectral images.
 - **Evaluation Metrics**: Model performance evaluated using PSNR, RMSE, Pearson Correlation Coefficient, and Registration Time.
 - **Simple Workflow**: End-to-end pipeline for training, evaluation, and testing with example scripts.
+- **Key Features and Functionality**:
+Denoising Autoencoder Model: The main model in DenoisingAutoencoder uses convolutional and transpose convolutional layers to effectively learn and reconstruct clean images from noisy multispectral images.
+- **Data Preprocessing and Loading**: The custom ImageDataset class loads and resizes the images, providing a convenient way to feed multispectral images into the model.
+- **Training and Evaluation**: The code includes a full training loop using MSE as the loss function. Evaluation metrics like PSNR, RMSE, Pearson Correlation Coefficient, and Mutual Information are calculated for each epoch, helping to assess model performance.
+- **Parallel Processing for Denoising**: Leveraging the joblib library, the code parallelizes the denoising process across multiple cores for efficient performance.
+- **Comparison with Non-Local Means (NLM) Denoising**: In addition to the autoencoder model, the code includes functionality to denoise images with Non-Local Means for comparative evaluation, with metrics recorded for both methods.
+- **Metrics Tracking**: The model tracks metrics (PSNR, RMSE, Mutual Information, Pearson Correlation) and logs the average registration time for both the autoencoder and NLM methods.
+- **Image Saving**: Denoised images are saved in a designated output directory, organized by input wavelength.
 
 ---
 
