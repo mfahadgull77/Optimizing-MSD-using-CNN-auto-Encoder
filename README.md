@@ -194,8 +194,6 @@ Fahad, M. (2024). Optimizing Multispectral Transmission Images for Early Breast 
 ```
 
 ---
-
-## License
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
