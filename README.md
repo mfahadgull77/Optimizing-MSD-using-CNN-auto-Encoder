@@ -27,18 +27,90 @@ This repository contains a CNN-AE model specifically designed for denoising mult
 
 ---
 
-## Features
-- **CNN-AE Model**: A convolutional autoencoder that denoises multispectral images.
-- **Evaluation Metrics**: Model performance evaluated using PSNR, RMSE, Pearson Correlation Coefficient, and Registration Time.
-- **Simple Workflow**: End-to-end pipeline for training, evaluation, and testing with example scripts.
-- **Key Features and Functionality**:
-Denoising Autoencoder Model: The main model in DenoisingAutoencoder uses convolutional and transpose convolutional layers to effectively learn and reconstruct clean images from noisy multispectral images.
-- **Data Preprocessing and Loading**: The custom ImageDataset class loads and resizes the images, providing a convenient way to feed multispectral images into the model.
-- **Training and Evaluation**: The code includes a full training loop using MSE as the loss function. Evaluation metrics like PSNR, RMSE, Pearson Correlation Coefficient, and Mutual Information are calculated for each epoch, helping to assess model performance.
-- **Parallel Processing for Denoising**: Leveraging the joblib library, the code parallelizes the denoising process across multiple cores for efficient performance.
-- **Comparison with Non-Local Means (NLM) Denoising**: In addition to the autoencoder model, the code includes functionality to denoise images with Non-Local Means for comparative evaluation, with metrics recorded for both methods.
-- **Metrics Tracking**: The model tracks metrics (PSNR, RMSE, Mutual Information, Pearson Correlation) and logs the average registration time for both the autoencoder and NLM methods.
-- **Image Saving**: Denoised images are saved in a designated output directory, organized by input wavelength.
+# Optimizing Multispectral Transmission Images for Early Breast Cancer Screening
+
+This repository contains code and scripts to support early breast cancer screening by processing multispectral transmission images. The main components include a Convolutional Autoencoder (CNN-AE) for denoising images and a grayscale conversion script for generating contrast-enhanced images and their histogram plots.
+
+---
+
+## Table of Contents
+- [CNN-AE Model for Denoising](#cnn-ae-model-for-denoising)
+  - [Evaluation Metrics](#evaluation-metrics)
+  - [Simple Workflow](#simple-workflow)
+  - [Key Features and Functionality](#key-features-and-functionality)
+- [Grayscale Conversion and Histogram Plotting](#grayscale-conversion-and-histogram-plotting)
+  - [Code Workflow](#code-workflow)
+- [Requirements](#requirements)
+- [Citation](#citation)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## CNN-AE Model for Denoising
+A convolutional autoencoder designed to denoise multispectral images, enhancing clarity for early breast cancer screening applications.
+
+### Evaluation Metrics
+Model performance is evaluated using:
+- **PSNR** (Peak Signal-to-Noise Ratio): Measures the ratio of signal to noise in the denoised images.
+- **RMSE** (Root Mean Square Error): Quantifies the average error in the denoising.
+- **Pearson Correlation Coefficient**: Assesses structural similarity between the original and denoised images.
+- **Registration Time**: Logs the time taken to denoise images with both the autoencoder and Non-Local Means (NLM) methods.
+
+### Simple Workflow
+The project provides an end-to-end pipeline for:
+- **Training** the CNN-AE model,
+- **Evaluating** its performance with built-in metrics,
+- **Testing** and saving denoised outputs with easy-to-follow example scripts.
+
+### Key Features and Functionality
+- **Denoising Autoencoder Model**: The `DenoisingAutoencoder` model uses convolutional and transpose convolutional layers to effectively learn and reconstruct clean images from noisy multispectral images.
+  
+- **Data Preprocessing and Loading**: A custom `ImageDataset` class loads and resizes the images to the required input size, providing a structured way to feed multispectral images into the model.
+
+- **Training and Evaluation**: The code includes a full training loop, utilizing Mean Squared Error (MSE) as the loss function. Evaluation metrics such as PSNR, RMSE, Pearson Correlation Coefficient, and Mutual Information are calculated at each epoch, aiding in thorough performance assessment.
+
+- **Parallel Processing for Denoising**: Leveraging the `joblib` library, the denoising process is parallelized across multiple cores, enhancing processing efficiency.
+
+- **Comparison with Non-Local Means (NLM) Denoising**: The code offers functionality to apply Non-Local Means (NLM) denoising as a comparative method, with metrics calculated for both the autoencoder and NLM outputs.
+
+- **Metrics Tracking**: The model consistently tracks and logs metrics (PSNR, RMSE, Mutual Information, and Pearson Correlation) as well as the average registration time for both denoising methods.
+
+- **Image Saving**: The denoised images are saved in an organized output directory, with subdirectories corresponding to input wavelengths, ensuring clear and accessible storage of results.
+
+---
+
+## Grayscale Conversion and Histogram Plotting
+
+This additional script processes images by converting them to grayscale, enhancing contrast, and saving both the adjusted images and their histogram plots. The script complements the CNN-AE model by providing a visualization of intensity distribution in grayscale images.
+
+### Code Workflow:
+1. **Setup Input and Output Directories**: 
+   - `input_dir`: Directory containing the images to be processed.
+   - `output_dir`: Directory where processed grayscale images and histogram plots will be saved.
+   
+2. **Image Processing**:
+   - Loads each image, resizes it to 512x512 pixels, and converts it to grayscale.
+   
+3. **Brightness and Contrast Adjustment**:
+   - Increases brightness by a specified amount (`brightness_increase`).
+   - Adjusts contrast by normalizing the grayscale image’s pixel intensities, with values clipped between 0 and 255.
+
+4. **Saving the Processed Image and Histogram**:
+   - Saves the contrast-adjusted grayscale image to the output directory.
+   - Generates and saves a histogram plot of pixel intensities for each grayscale image, providing insight into the intensity distribution.
+
+---
+
+## Requirements
+The project requires Python 3.7 or later with dependencies specified in `requirements.txt`.
+
+---
+
+## Citation
+If you find this project useful, please cite it as follows:
+
+```plaintext
+Fahad, M. (2024). Optimizing Multispectral Transmission Images for Early Breast Cancer Screening using Convolutional Neural Network AutoEncoder. Zenodo. https://doi.org/10.5281/zenodo.13937695
 
 ---
 
