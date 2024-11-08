@@ -187,9 +187,8 @@ A small sample dataset has been uploaded for experimental purposes, allowing use
 
 ## Citation
 If you find this project useful, please cite it as follows:
-
 ```plaintext
-Fahad, M. (2024). Optimizing Multispectral Transmission Images for Early Breast Cancer Screening using Convolutional Neural Network AutoEncoder. Zenodo. 10.5281/zenodo.14037985
+Fahad, M. (2024). Optimizing Multispectral Transmission Images for Early Breast Cancer Screening using Convolutional Neural Network AutoEncoder. Zenodo. https://doi.org/10.5281/zenodo.14037985
 ```
 
 ---
